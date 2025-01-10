@@ -14,6 +14,7 @@ import leelaVinodhamPoster from "./public/leela-vinodham-poster.jpg";
 import zebraPoster from "./public/zebra-poster.png";
 import sirPoster from "./public/Sir_(2024_film)_poster.jpg";
 import bachhalaMalliPoster from "./public/bachalamalli-poster.jpg";
+import gameChangerPoster from "./public/Game_Changer_Telugu.jpg";
 
 export const DateMonthYearForBlogPost = (lastUpdateTime: string) => {
   const months = [
@@ -120,6 +121,9 @@ interface Blog_Post_URL_Props {
 
   BACHHALA_MALLI_ABSOLUTE: string;
   BACHHALA_MALLI_RELATIVE: string;
+
+  GAME_CHANGER_ABSOLUTE: string;
+  GAME_CHANGER_RELATIVE: string;
 }
 
 export const blogPostURLS: Blog_Post_URL_Props = {
@@ -182,6 +186,9 @@ export const blogPostURLS: Blog_Post_URL_Props = {
 
   BACHHALA_MALLI_ABSOLUTE: `${BASE_URLS.HOME_PAGE_BASE_URL}/bachhala-malli`,
   BACHHALA_MALLI_RELATIVE: "/bachhala-malli",
+
+  GAME_CHANGER_ABSOLUTE: `${BASE_URLS.HOME_PAGE_BASE_URL}/game-changer-telugu-movie`,
+  GAME_CHANGER_RELATIVE: "/game-changer-telugu-movie",
 };
 
 interface blogPostsObjProps {
@@ -576,9 +583,40 @@ export const SEO_OBJ: SEO_OBJ_Props = {
     featuredImageAltText: "bachhala-malli-poster",
     ogImageURL: `${BASE_URLS.HOME_PAGE_BASE_URL}/bachalamalli-poster.jpg`,
   },
+
+  GAME_CHANGER: {
+    absoluteURL: blogPostURLS.GAME_CHANGER_ABSOLUTE,
+    relativeURL: blogPostURLS.GAME_CHANGER_RELATIVE,
+    title: "Game Changer Telugu Movie - iBOMMA",
+    description:
+      "Game Changer is an exciting upcoming Telugu-language political action movie which was going to be released in 2025 at iBOMMA in hd quality.",
+    publishedTime: "2025-01-10T09:37:55 IST",
+    lastUpdateTime: `${dynamicLastUpdatedTime()}`,
+    tags: [
+      { tag: "GAME CHANGER", href: `${blogPostURLS.GAME_CHANGER_RELATIVE}` },
+      { tag: "iBOMMA", href: `${blogPostURLS.HOME_PAGE_RELATIVE}` },
+      { tag: "Game Changer Telugu Movie iBOMMA", href: `${blogPostURLS.GAME_CHANGER_RELATIVE}` },
+      { tag: "Game Changer Telugu Movie 2025 review", href: `${blogPostURLS.GAME_CHANGER_RELATIVE}` },
+    ],
+    featuredImage: gameChangerPoster,
+    featuredImageAltText: "game-changer-poster",
+    ogImageURL: `${BASE_URLS.HOME_PAGE_BASE_URL}/Game_Changer_Telugu.jpg`,
+  },
 };
 
 export const blogPostsObj: blogPostsObjProps[] = [
+  {
+    id: 14,
+    url: `${blogPostURLS.GAME_CHANGER_RELATIVE}`,
+    title: `${SEO_OBJ.GAME_CHANGER.title}`,
+    description: `${SEO_OBJ.GAME_CHANGER.description}`,
+    lastUpdateTime: `${SEO_OBJ.GAME_CHANGER.lastUpdateTime}`,
+    publishedTime: `${SEO_OBJ.GAME_CHANGER.publishedTime}`,
+    tags: SEO_OBJ.GAME_CHANGER.tags!,
+    featuredImage: SEO_OBJ.GAME_CHANGER.featuredImage,
+    featuredImageAltText: `${SEO_OBJ.GAME_CHANGER.featuredImageAltText}`,
+    ogImageURL: `${SEO_OBJ.GAME_CHANGER.ogImageURL}`,
+  },
   {
     id: 0,
     url: `${blogPostURLS.PUSHPA_2_RELATIVE}`,
