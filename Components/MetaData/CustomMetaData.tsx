@@ -66,6 +66,9 @@ export function CustomMetaData(props: any) {
       address: false,
       telephone: false,
     },
+    alternates: {
+      canonical: filteredOBJ[0].absoluteURL,
+    },
   };
   // console.log(metaDataOBJ, "META DATA OBJ");
   return metaDataOBJ;
